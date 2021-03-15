@@ -1,0 +1,42 @@
+{
+  "name": "shun0810/paiza-helpful",
+  "description": "Paiza helpful package.",
+  "homepage": "https://github.com/shun0810/paiza-helpful",
+  "license": "MIT",
+  "keywords": [
+    "PaizaHelpful"
+  ],
+  "require": {
+    "php": "^7.4"
+  },
+  "require-dev": {
+    "phpmd/phpmd": "^2.8",
+    "phpunit/phpunit": "^8.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "shun0810\\PaizaHelpful\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "__Vendor__\\__Package__\\": [
+        "tests/",
+        "tests/Fake"
+      ]
+    }
+  },
+  "scripts": {
+    "tests": [
+      "@test",
+      "@phpmd"
+    ],
+    "test": "./vendor/bin/phpunit",
+    "phpmd": "./vendor/bin/phpmd src,tests text ./phpmd.xml"
+  }
+}

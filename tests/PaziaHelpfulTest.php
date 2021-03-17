@@ -6,7 +6,7 @@ namespace __Vendor__\__Package__;
 
 use PHPUnit\Framework\TestCase;
 
-class __Package__Test extends TestCase
+class PaziaHelpfulTest extends TestCase
 {
     /**
      * @var __Package__
